@@ -1,6 +1,9 @@
 {
   "name": "@zfan/learn-lerna",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "publishConfig": {
     "access": "public"
   },
