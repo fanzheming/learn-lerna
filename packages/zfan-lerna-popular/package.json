@@ -1,6 +1,6 @@
 {
   "name": "zfan-lerna-popular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.4",
-    "zfan-lerna-core": "^0.0.1"
+    "zfan-lerna-core": "^0.0.2"
   }
 }
