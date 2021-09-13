@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.4",
-    "zfan-lerna-core": "^0.0.2"
+    "zfan-lerna-core": "^0.0.2",
+    "cross-env": "5.0.5"
   }
 }

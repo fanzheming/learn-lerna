@@ -2,6 +2,9 @@
 
 `公司现在用 lerna 管理多模块项目，先学一下。`
 
+目前最常见的 monorepo 解决方案是 Lerna 和 yarn 的 workspaces 特性，基于lerna和yarn workspace的monorepo工作流。
+
+由于yarn和lerna在功能上有较多的重叠,我们采用yarn官方推荐的做法,用yarn来处理依赖问题，用lerna来处理发布问题。
 
 # 使用
 ```bash
@@ -35,7 +38,7 @@ publishConfig -> 如果你的包名是带scope的例如："name": "@zfan/learn-l
 
 在 packages 下新建文件夹 -> 等于说是新建模块
 
-添加模块的依赖有两种方式：
+添加模块的依赖几种方式：
 
 1.在各模块下的package.json的dependencies或者devDependencies下直接写，然后运行lerna bootstrap
 
@@ -53,6 +56,16 @@ lerna add axios --scope=zfan-learn-lerna-core   添加axios到zfan-learn-lerna-c
 learn add lodash  添加lodash到每个模块
 ```
 
+3.使用yarn workspaces的命令
+
+
+若是现成的项目，可以直接使用如下命令去初始化全部依赖:
+```bash
+yarn install    等价于 lerna bootstrap --npm-client yarn --use-workspaces
+或者
+learn bootstrap   可以不带上面的参数，前提是lerna.json中配置了
+```
+
 
 lerna run  运行某个模块下的package.json下的脚本
 
@@ -68,3 +81,5 @@ learn publish 发包
 [官网](https://lerna.js.org/)
 
 [github](https://github.com/lerna/lerna#lernajson)
+
+[最佳实践文章](https://blog.csdn.net/i10630226/article/details/99702447)
