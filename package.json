@@ -1,6 +1,9 @@
 {
-  "name": "root",
+  "name": "@zfan/learn-lerna",
   "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }
